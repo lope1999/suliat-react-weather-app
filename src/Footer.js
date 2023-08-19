@@ -25,7 +25,7 @@ export default function Footer() {
         </a>
         and
         <a
-          href="https://suliat-weather-app.netlify.app/"
+          href="https://suliat-react-weather-app.netlify.app/"
           className="footer-link"
         >
           hosted on Netlify
