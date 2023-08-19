@@ -1,0 +1,26 @@
+.Weather-details {
+  display: grid;
+  justify-content: center;
+}
+
+.Weather-details .weather-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.Weather-details .units {
+  position: relative;
+  font-size: 14px;
+  top: -14px;
+}
+
+.Weather-details .units .active {
+  color: #47494a;
+  cursor: default;
+  text-decoration: none;
+}
+
+.Weather-details .weather-day {
+  font-size: 60px;
+  text-align: center;
+}

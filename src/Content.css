@@ -1,0 +1,4 @@
+.Content .weather-result {
+  box-shadow: rgba(2, 71, 161, 0.541) 0px 8px 8px 0;
+  background: linear-gradient(to top, #98d4f4 20%, #e2edfc 80%);
+}

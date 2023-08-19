@@ -1,0 +1,24 @@
+.City-details {
+  color: #0b5b87;
+  font-size: 15px;
+  cursor: pointer;
+  background: linear-gradient(to top, #cee2ed 0%, #e2edfc 100%);
+}
+.City-details:hover {
+  color: azure;
+  background: linear-gradient(to top, #98d4f4 0%, #98d4f4 100%);
+}
+
+.City-details .city-text {
+  font-family: "Sedgwick Ave Display", cursive;
+  color: black;
+  text-transform: capitalize;
+}
+
+.City-details .temp-description {
+  display: block;
+}
+
+.City-details .temp-description::first-letter {
+  text-transform: capitalize;
+}

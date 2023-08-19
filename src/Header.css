@@ -1,0 +1,28 @@
+.Header {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.Header .suliat-title {
+  box-shadow: rgba(2, 71, 161, 0.541) 0px 8px 8px 0;
+  background: linear-gradient(to top, #98d4f4 30%, #e2edfc 70%);
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+
+.Header .suiat-logo {
+  width: 15%;
+  margin: 0 auto;
+}
+
+.Header .title {
+  font-size: 16px;
+}
+
+.Header .current-button-wrapper {
+  margin-left: 50%;
+  align-items: center;
+  display: flex;
+}
