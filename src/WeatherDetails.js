@@ -1,22 +1,21 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 import "./WeatherDetails.css";
 
-export default function WeatherDetails() {
+export default function WeatherDetails({ temperature, description, icon }) {
   return (
     <div className="Weather-details row">
       <div className="weather-day">
-        <span id="temperature">23</span>
+        <span>{temperature}</span>
         <span className="units">
-          <a href="#" id="celcius" className="active">
+          <a href="#" className="active">
             °C
           </a>
-          |
-          <a href="#" id="fahrenheit">
-            °F
-          </a>
+          |<a href="#">°F</a>
         </span>
       </div>
-      <img className="weather-logo" src="" alt="" id="weather-icon" />
+      <WeatherIcon code={icon} />
+      {/* <img className="weather-logo" src={iconUrl} alt={description} /> */}
     </div>
   );
 }

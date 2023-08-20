@@ -3,10 +3,10 @@
   justify-content: center;
 }
 
-.Weather-details .weather-logo {
+/* .Weather-details .weather-logo {
   width: 150px;
   height: 150px;
-}
+} */
 
 .Weather-details .units {
   position: relative;
