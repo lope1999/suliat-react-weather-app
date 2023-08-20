@@ -13,11 +13,10 @@ export default function Content() {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      temperature: Math.round(response.data.main.temp),
+      temperature: response.data.main.temp,
       humidity: Math.round(response.data.main.humidity),
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      // iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
       icon: response.data.weather[0].icon,
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
