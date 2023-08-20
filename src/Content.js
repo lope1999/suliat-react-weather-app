@@ -57,7 +57,7 @@ export default function Content() {
         />
         <section className="weather-result card rounded">
           <div className="row card-body">
-            <div className="col" id="forecast">
+            {/* <div className="col" id="forecast">
               {foreCast.map((element) => {
                 return (
                   <WeatherForecast
@@ -67,7 +67,7 @@ export default function Content() {
                   />
                 );
               })}
-            </div>
+            </div> */}
 
             <div className="col">
               <CityDetails data={weatherData} />
