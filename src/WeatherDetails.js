@@ -7,7 +7,7 @@ export default function WeatherDetails({ temperature, description, icon }) {
   return (
     <div className="Weather-details row">
       <WeatherTemperature celsius={temperature} />
-      <WeatherIcon code={icon} />
+      <WeatherIcon code={icon} size={40} />
       {/* <img className="weather-logo" src={iconUrl} alt={description} /> */}
     </div>
   );

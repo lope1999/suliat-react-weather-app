@@ -13,6 +13,7 @@ export default function Content() {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: Math.round(response.data.main.humidity),
       date: new Date(response.data.dt * 1000),
@@ -24,7 +25,7 @@ export default function Content() {
   }
 
   function search() {
-    const apiKey = "5293d8454b519c30f6f6331f38c85b4c";
+    const apiKey = "2bd326a60dc89a53287e446e819664df";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -38,15 +39,6 @@ export default function Content() {
     setCity(event.target.value);
   }
 
-  const foreCast = [
-    { day: "Mon", min: 12, max: 21 },
-    { day: "Tues", min: 9, max: 24 },
-    { day: "Wedn", min: 23, max: 39 },
-    { day: "Thurs", min: 19, max: 30 },
-    { day: "Fri", min: 20, max: 26 },
-    { day: "Sat", min: 17, max: 22 },
-  ];
-
   if (weatherData.ready) {
     return (
       <div className="Content">
@@ -57,17 +49,9 @@ export default function Content() {
         />
         <section className="weather-result card rounded">
           <div className="row card-body">
-            {/* <div className="col" id="forecast">
-              {foreCast.map((element) => {
-                return (
-                  <WeatherForecast
-                    day={element.day}
-                    min={element.min}
-                    max={element.max}
-                  />
-                );
-              })}
-            </div> */}
+            <div className="col">
+              <WeatherForecast coordinates={weatherData.coordinates} />
+            </div>
 
             <div className="col">
               <CityDetails data={weatherData} />

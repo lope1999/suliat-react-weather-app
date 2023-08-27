@@ -1,7 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-export default function WeatherIcon({ code }) {
+export default function WeatherIcon({ code, size }) {
   const codeMapping = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_NIGHT",
@@ -22,6 +22,26 @@ export default function WeatherIcon({ code }) {
     "50d": "FOG",
     "50n": "FOG",
   };
+  const colorMapping = {
+    "01d": "yellow",
+    "01n": "brown",
+    "02d": "sky blue",
+    "02n": "navy blue",
+    "03d": "sky blue",
+    "03n": "navy blue",
+    "04d": "blue",
+    "04n": "blue",
+    "09d": "#0c89cb",
+    "09n": "#0c89cb",
+    "10d": "#0c89cb",
+    "10n": "#0c89cb",
+    "11d": "#0c89cb",
+    "11n": "#0c89cb",
+    "13d": "white",
+    "13n": "white",
+    "50d": "golden yellow",
+    "50n": "golden yellow",
+  };
   const defaults = {
     color: "blue",
     size: 40,
@@ -31,8 +51,8 @@ export default function WeatherIcon({ code }) {
   return (
     <ReactAnimatedWeather
       icon={codeMapping[code]}
-      color={defaults.color}
-      size={defaults.size}
+      color={colorMapping[code]}
+      size={size}
       animate={defaults.animate}
     />
   );
