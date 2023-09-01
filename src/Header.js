@@ -1,10 +1,10 @@
 import React from "react";
 import "./Header.css";
 
-export default function Header() {
+export default function Header({ handleCurrentBtnClick }) {
   return (
     <header className="Header">
-      <span className="suliat-title card border rounded-pill">
+      <span className="suliat-title card border rounded-pill d-none d-md-block">
         <img
           className="suiat-logo"
           src="./images/logo-s2.png"
@@ -15,7 +15,7 @@ export default function Header() {
       <div className="current-button-wrapper">
         <button
           className="current-button btn btn-outline-info"
-          id="current-btn"
+          onClick={handleCurrentBtnClick}
         >
           current
         </button>
